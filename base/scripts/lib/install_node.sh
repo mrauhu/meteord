@@ -20,4 +20,6 @@ mv ${NODE_DIST} /opt/nodejs
 ln -sf /opt/nodejs/bin/node /usr/bin/node
 ln -sf /opt/nodejs/bin/npm /usr/bin/npm
 
-npm install --global npm@5.3.0
+# Scoped NPM fix issues when you try to deploy a Meteor project with Node binary packages like `bcrypt`,
+# from the Windows host to the Linux server
+npm install --global @mrauhu/npm@5.3.0
