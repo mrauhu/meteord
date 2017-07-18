@@ -1,4 +1,4 @@
-[![Circle CI](https://circleci.com/gh/abernix/meteord/tree/master.svg?style=svg)](https://circleci.com/gh/abernix/meteord/tree/master)
+[![Circle CI](https://circleci.com/gh/mrauhu/meteord/tree/master.svg?style=svg)](https://circleci.com/gh/mrauhu/meteord/tree/master)
 
 # MeteorD - Docker Runtime for Meteor Apps
 
