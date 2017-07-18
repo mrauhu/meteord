@@ -1,13 +1,34 @@
 [![Circle CI](https://circleci.com/gh/abernix/meteord/tree/master.svg?style=svg)](https://circleci.com/gh/abernix/meteord/tree/master)
 
-> ###Use [kadirahq/meteord](https://github.com/kadirahq/meteord) for meteor 1.4 and above. 
+# MeteorD - Docker Runtime for Meteor Apps
 
-## MeteorD - Docker Runtime for Meteor Apps
+> Docker image for painless deployment from Windows host to Linux server via [Meteor Up](https://github.com/zodern/meteor-up).
 
-There are two main ways you can use Docker with Meteor apps. They are:
+## How to use with Meteor Up
 
-1. Build a Docker image for your app
-2. Running a Meteor bundle with Docker
+1. Change value of the field `docker.image` in file `mup.js` to `mrauhu/meteord:base`.
+2. Run `mup deploy`.
+
+## Alternative docker images
+
+* `mrauhu/meteord:node-4.8.4-base` — for Meteor 1.5
+  * Node.js 4.8.4
+  * [`@mrauhu/npm@4.6.1`](https://github.com/mrauhu/npm/tree/v4-scoped-package-for-meteord)
+* `mrauhu/meteord:node-8.4.1-base` — for Meteor 1.6
+  * Node.js 8.1.4
+  *  [`@mrauhu/npm@5.3.0`](https://github.com/mrauhu/npm/tree/scoped-package-for-meteord)
+
+## Info 
+
+This Dockerfile have scoped NPM 5 package `@mrauhu/npm` for resolve nasty bug with windows-like paths and `npm rebuild`. Without this fix Windows user cannot use native Node.js modules, like `bcrypt`, in Meteor application and making deployments to to Linux server. See details here:
+
+* Fix: normalize windows-like slashes inside `npm rebuild` and magical cure for Meteor Up deployment with `bcrypt` etc. 
+https://github.com/npm/npm/pull/17802
+
+Dockerfile based on: https://github.com/abernix/meteord
+
+---
+
 
 **MeteorD supports these two ways. Let's see how to use MeteorD**
 
