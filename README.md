@@ -20,7 +20,7 @@
 
 ## Info 
 
-This Dockerfile have scoped NPM 5 package `@mrauhu/npm` for resolve nasty bug with windows-like paths and `npm rebuild`. Without this fix Windows user cannot use native Node.js modules, like `bcrypt`, in Meteor application and making deployments to to Linux server. See details here:
+This Dockerfile have scoped NPM package `@mrauhu/npm` for resolve nasty bug with windows-like paths and `npm rebuild`. Without this fix Windows user cannot use native Node.js modules, like `bcrypt`, in Meteor application and making deployments to to Linux server. See details here:
 
 * Fix: normalize windows-like slashes inside `npm rebuild` and magical cure for Meteor Up deployment with `bcrypt` etc. 
 https://github.com/npm/npm/pull/17802
