@@ -1,6 +1,27 @@
-[![Circle CI](https://circleci.com/gh/abernix/meteord/tree/master.svg?style=svg)](https://circleci.com/gh/abernix/meteord/tree/master)
+[![Circle CI](https://circleci.com/gh/mrauhu/meteord/tree/master.svg?style=svg)](https://circleci.com/gh/mrauhu/meteord/tree/master)
 
-> ###Use [kadirahq/meteord](https://github.com/kadirahq/meteord) for meteor 1.4 and above. 
+# MeteorD - Docker Runtime for Meteor Apps
+
+> Docker image for painless deployment from Windows host to Linux server via [Meteor Up](https://github.com/zodern/meteor-up).
+
+## How to use with Meteor Up
+
+1. Change value of the field `docker.image` in file `mup.js` to `mrauhu/meteord:base`.
+2. Run `mup deploy`.
+
+## Alternative docker images
+
+* `mrauhu/meteord:node-4.8.4-base` — for Meteor 1.5
+  * Node.js 4.8.4
+  * [`@mrauhu/npm@4.6.1`](https://github.com/mrauhu/npm/tree/v4-scoped-package-for-meteord)
+* `mrauhu/meteord:node-8.1.4-base` — for Meteor 1.6
+  * Node.js 8.1.4
+  *  [`@mrauhu/npm@5.3.0`](https://github.com/mrauhu/npm/tree/scoped-package-for-meteord)
+* `mrauhu/meteord:node-8.4.0-base`
+  * Node.js 8.4.0
+  * NPM latest
+
+---
 
 ## MeteorD - Docker Runtime for Meteor Apps
 
